@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# BindaasNews - College Life Unleashed
 
-## Project info
+BindaasNews is an anonymous news sharing platform designed specifically for Theem College students to share funny moments, pranks, and college life stories.
 
-**URL**: https://lovable.dev/projects/8f3eebfa-e448-4ae5-bedb-7fa47feac426
+## Features
 
-## How can I edit this code?
+- 🔒 Anonymous posting
+- 📱 Progressive Web App (PWA) support
+- 🎨 Modern UI with shadcn-ui components
+- 🌙 Responsive design
+- 🔄 Real-time updates
+- 👥 User authentication
+- 💾 Supabase backend integration
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Frontend**
+  - React
+  - TypeScript
+  - Vite
+  - Tailwind CSS
+  - shadcn-ui
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8f3eebfa-e448-4ae5-bedb-7fa47feac426) and start prompting.
+- **Backend & Database**
+  - Supabase
+  - PostgreSQL
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Authentication**
+  - Supabase Auth
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+1. **Clone the repository**
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/yashpawar9274/Bindaas-News.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+cd theem-bindaas-news
 ```
 
-**Edit a file directly in GitHub**
+2. **Set up environment variables**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Create a `.env` file in the root of the project and add your Supabase URL and Anon Key:
 
-**Use GitHub Codespaces**
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Directory Structure
 
-## What technologies are used for this project?
+The project is organized into the following main directories:
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8f3eebfa-e448-4ae5-bedb-7fa47feac426) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+src/
+├── components/     # Reusable UI components
+├── contexts/      # React contexts
+├── hooks/         # Custom hooks
+├── integrations/  # Third-party integrations
+├── lib/          # Utility functions
+└── pages/        # Page components
+```
