@@ -1,0 +1,126 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BindaasNews Design System - Vibrant, youthful, college-focused */
+
+@layer base {
+  :root {
+    --background: 45 15% 97%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Primary: Vibrant Orange/Red */
+    --primary: 15 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Deep Purple */
+    --secondary: 260 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 45 15% 95%;
+    --muted-foreground: 240 5% 50%;
+
+    /* Accent: Bright Yellow */
+    --accent: 48 95% 65%;
+    --accent-foreground: 240 10% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 15% 90%;
+    --input: 45 15% 90%;
+    --ring: 15 85% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom BindaasNews tokens */
+    --fun-gradient: linear-gradient(135deg, hsl(15 85% 55%) 0%, hsl(260 60% 45%) 100%);
+    --energy-gradient: linear-gradient(45deg, hsl(48 95% 65%) 0%, hsl(15 85% 55%) 100%);
+    --hero-text: hsl(240 10% 15%);
+    --news-card: hsl(0 0% 100%);
+    --news-card-hover: hsl(45 15% 98%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-hero-text;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--fun-gradient);
+  }
+
+  .gradient-energy {
+    background: var(--energy-gradient);
+  }
+
+  .news-card {
+    @apply bg-news-card hover:bg-news-card-hover transition-all duration-300 rounded-xl shadow-sm hover:shadow-md;
+  }
+
+  .floating-action {
+    @apply fixed bottom-6 right-6 z-50 rounded-full shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsla(15, 85%, 55%, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px hsla(15, 85%, 55%, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
